@@ -55,7 +55,7 @@ RSpec.configure do |config|
   #
   # The different available types are documented in the features, such as in
   # https://relishapp.com/rspec/rspec-rails/docs
-  config.default_formatter = "doc" if config.files_to_run.one?
+  config.default_formatter = 'doc' if config.files_to_run.one?
   config.infer_spec_type_from_file_location!
 
   # Filter lines from Rails gems in backtraces.
