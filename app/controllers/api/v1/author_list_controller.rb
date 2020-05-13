@@ -1,6 +1,9 @@
 class Api::V1::AuthorListController < ApplicationController
   def create
-    render json: { status: 'working' }
+    author_list = CreateAuthorListService.call(author_params)
+
+    render json: author_list
+
   rescue StandardError => e
     errors = { errors: e, backtrace: e.backtrace }
     render json: errors, status: 500
